@@ -4,7 +4,7 @@ variable "aws_region" {
 }
 variable "aws_profile_access_key_path" {
   description = "aws access key"
-  default = "C:/Users/yegor/.aws/credentials.txt"
+  default = "/home/ubuntu/.aws/credentials"
 }
 variable "aws_profile" {
   description = "aws profile"
@@ -31,4 +31,8 @@ variable "app_port" {
 variable "app_port_ssh" {
   description = "Port exposed by the docker image to redirect traffic to"
   default     = 22
+}
+variable "ecr_repository_url" {
+  type = string
+  default = "367668710117.dkr.ecr.eu-central-1.amazonaws.com/ecr"
 }

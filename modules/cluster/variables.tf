@@ -4,7 +4,7 @@ variable "aws_region" {
 }
 variable "aws_profile_access_key_path" {
   description = "aws access key"
-  default = "C:/Users/yegor/.aws/credentials.txt"
+  default = "/home/ubuntu/.aws/credentials"
 }
 variable "aws_profile" {
   description = "aws profile"
@@ -22,7 +22,7 @@ variable "app_name" {
 }
 variable "environment" {
   type = string
-  default = "VPC"
+  default = "dev"
 }
 variable "app_port" {
   description = "Port exposed by the docker image to redirect traffic to"
@@ -35,4 +35,17 @@ variable "app_port_ssh" {
 variable "app_count" {
   description = "Number of docker containers to run"
   default     = 1
+}
+
+variable "image_tag" {
+  description = "image tag from git commits"
+  default = "latest"
+}
+
+variable "taskdef_template" {
+  default = "cb_app.json.tpl"
+}
+variable "ecr_repository_url" {
+  type = string
+  default = "367668710117.dkr.ecr.eu-central-1.amazonaws.com/ecr"
 }
