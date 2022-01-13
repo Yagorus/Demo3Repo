@@ -5,7 +5,7 @@ variable "aws_region" {
 
 variable "aws_profile_access_key_path" {
   description = "aws access key"
-  default = "C:/Users/yegor/.aws/credentials.txt"
+  default = "/home/ubuntu/.aws/credentials"
 }
 
 variable "aws_profile" {
