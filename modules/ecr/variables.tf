@@ -22,7 +22,7 @@ variable "app_name" {
 }
 variable "environment" {
   type = string
-  default = "VPC"
+  default = "dev"
 }
 variable "app_port" {
   description = "Port exposed by the docker image to redirect traffic to"

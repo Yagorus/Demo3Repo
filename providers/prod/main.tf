@@ -1,4 +1,4 @@
-/*
+
 module "ecr" {
     source = "../../modules//ecr"
     aws_region = var.aws_region
@@ -7,7 +7,8 @@ module "ecr" {
     environment = var.environment
     app_name = var.app_name
 }
-*/
+
+
 module "init-build" {
     source = "../../modules//init-build"
     aws_region = var.aws_region

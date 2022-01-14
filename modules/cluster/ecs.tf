@@ -9,11 +9,11 @@ resource "aws_ecs_cluster" "aws-ecs-cluster" {
 resource "aws_ecs_task_definition" "aws-ecs-task" {
   family = "${var.app_name}-task"
 
-  container_definitions = <<EOF
-[
+  container_definitions = <<DEFINITION
+  [
     {
       "name": "${var.app_name}-container",
-      "image": "${aws_ecr_repository.aws-ecr.repository_url}:latest",
+      "image": "${var.ecr_repository_url}:latest",
       "essential": true,
       "portMappings": [
         {
@@ -25,7 +25,8 @@ resource "aws_ecs_task_definition" "aws-ecs-task" {
       "networkMode": "awsvpc"
     }
   ]
-  EOF
+  DEFINITION
+
   requires_compatibilities = ["FARGATE"]
   network_mode             = "awsvpc"
   memory                   = "512"

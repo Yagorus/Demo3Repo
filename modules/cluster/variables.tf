@@ -22,7 +22,7 @@ variable "app_name" {
 }
 variable "environment" {
   type = string
-  default = "dev"
+  default = "prod"
 }
 variable "app_port" {
   description = "Port exposed by the docker image to redirect traffic to"
@@ -43,7 +43,7 @@ variable "image_tag" {
 }
 
 variable "taskdef_template" {
-  default = "cb_app.json.tpl"
+  default = "cb_app.json"
 }
 variable "ecr_repository_url" {
   type = string
