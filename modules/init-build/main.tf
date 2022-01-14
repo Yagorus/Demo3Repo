@@ -3,7 +3,6 @@ resource "null_resource" "build" {
   provisioner "local-exec" {
     command = "bash init.sh"
     working_dir = var.working_dir
-    #./my_custom_script.sh 
     environment = {
         REPOSITORY_URL = var.ecr_repository_url
         TAG = var.image_tag
