@@ -24,7 +24,7 @@ variable "environment" {
 
 variable "app_count" {
   description = "Number of docker containers to run"
-  default     = 1
+  default     = 3
 }
 
 variable "image_tag" {
