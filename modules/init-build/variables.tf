@@ -1,6 +1,6 @@
 variable "work_dir"{
     description = "placement of app"
-    default = "/home/ubuntu/Demo3Repo/app/"
+    default = "/home/ubuntu/Demo3Repo/app"
 }
 
 variable "ecr_repository_url" {

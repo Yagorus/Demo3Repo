@@ -16,7 +16,7 @@ module "init-build" {
     #remote_state_bucket = var.bucket_name
     environment = var.environment
     app_name = var.app_name
-    working_dir = "${path.root}/../app"
+    working_dir = "../../app"
     image_tag = var.image_tag
 }
 
@@ -29,6 +29,6 @@ module "ecs-cluster" {
     app_name = var.app_name
     image_tag = var.image_tag
     ecr_repository_url = var.ecr_repository_url
-    taskdef_template = "../../modules/cluster/cb_app.json.tpl"
+    #taskdef_template = "../../modules/cluster/cb_app.json.tpl"
     app_count = var.app_count
 }
