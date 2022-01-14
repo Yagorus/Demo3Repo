@@ -5,7 +5,7 @@ RUN apt-get -y install apache2
 ARG GIT_COMMIT=unspecified
 LABEL git_commit=$GIT_COMMIT
 
-COPY ./index.html /home/ubuntu/testDocker/
+COPY /home/ubuntu/testDocker/ index.html
 RUN echo index.html > /var/www/html/index.html
 CMD ["/usr/sbin/apache2ctl", "-DFOREGROUND"]
 EXPOSE 80
