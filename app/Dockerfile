@@ -5,5 +5,4 @@ ADD assign.sh .
 ADD index.html .
 RUN cat index.html > /var/www/html/index.html
 CMD ["/usr/sbin/apache2ctl", "-DFOREGROUND"]
-ENTRYPOINT ["bash", "assing.sh /"]
 EXPOSE 80
