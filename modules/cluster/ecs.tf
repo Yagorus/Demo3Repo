@@ -14,7 +14,6 @@ resource "aws_ecs_task_definition" "aws-ecs-task" {
     {
       "name": "${var.app_name}-container",
       "image": "${var.ecr_repository_url}:${var.image_tag}",
-      "command": ["bash", "assign.sh"],
       "essential": true,
       "portMappings": [
         {
