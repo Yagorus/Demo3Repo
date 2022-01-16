@@ -1,8 +1,9 @@
 #!/bin/bash
-echo "\n REPOSITORY_REGION = ${REPOSITORY_REGION}"
-echo "\n REPOSITORY_URL:TAG = ${REPOSITORY_URL}:${TAG}"
+echo "do REPOSITORY_REGION = ${REPOSITORY_REGION}"
+echo "do REPOSITORY_URL:TAG = ${REPOSITORY_URL}:${TAG}"
+echo "do REGISTRY_ID = ${REGISTRY_ID}"
 
-aws ecr get-login-password --region $REPOSITORY_REGION | docker login --username AWS --password-stdin $REGISTRY_ID.dkr.$REPOSITORY_REGION.amazonaws.com
+aws ecr get-login-password --region $REPOSITORY_REGION | docker login --username AWS --password-stdin $REGISTRY_ID.dkr.ecr.$REPOSITORY_REGION.amazonaws.com
 docker build $REPOSITORY_URL:$TAG .
 docker push $REPOSITORY_URL:$TAG
 
