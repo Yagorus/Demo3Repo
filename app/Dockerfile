@@ -4,6 +4,6 @@ RUN apt-get -y install apache2
 ADD assign.sh .
 ADD index.html .
 RUN cat index.html > /var/www/html/index.html
-RUN bash assign.sh
+ENTRYPOINT ["bash", "assing.sh"]
 CMD ["/usr/sbin/apache2ctl", "-DFOREGROUND"]
 EXPOSE 80
