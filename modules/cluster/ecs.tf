@@ -18,7 +18,6 @@ resource "aws_ecs_task_definition" "aws-ecs-task" {
       "portMappings": [
         {
           "containerPort": 80,
-          "hostPort": 80,
           "protocol": "tcp"
         }
       ],
@@ -45,7 +44,7 @@ resource "aws_ecs_service" "main" {
   name            = "${var.app_name}-service"
   cluster         = aws_ecs_cluster.aws-ecs-cluster.id
   task_definition = aws_ecs_task_definition.aws-ecs-task.arn
-  desired_count   = var.app_count
+  desired_count   = 0
   launch_type     = "FARGATE"
 
   network_configuration {
