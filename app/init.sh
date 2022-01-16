@@ -3,8 +3,6 @@ echo "do REPOSITORY_REGION = ${REPOSITORY_REGION}"
 echo "do REPOSITORY_URL:TAG = ${REPOSITORY_URL}:${TAG}"
 echo "do REGISTRY_ID = ${REGISTRY_ID}"
 
-myip=`curl http://169.254.169.254/latest/meta-data/local-ipv4`
-echo ${myip} >> /home/ubuntu/Demo3Repo/app/index.html
 aws ecr get-login-password --region $REPOSITORY_REGION | docker login --username AWS --password-stdin $REGISTRY_ID.dkr.ecr.$REPOSITORY_REGION.amazonaws.com
 docker build -t $REPOSITORY_URL:$TAG /home/ubuntu/Demo3Repo/app/
 docker push $REPOSITORY_URL:$TAG
