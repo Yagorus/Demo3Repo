@@ -17,7 +17,9 @@ resource "aws_ecs_task_definition" "aws-ecs-task" {
       "essential": true,
       "portMappings": [
         {
-          "containerPort": 80
+          "containerPort": 80,
+          "hostPort": 80,
+          "protocol": "tcp"
         }
       ],
       "cpu": 256,
@@ -38,18 +40,6 @@ resource "aws_ecs_task_definition" "aws-ecs-task" {
     Name        = "${var.app_name}-ecs-td"
   }
 }
-
-
-/*
-resource "aws_cloudwatch_log_group" "log-group" {
-  name = "${var.app_name}-logs"
-
-  tags = {
-    Application = var.app_name
-
-  }
-}
-*/
 
 resource "aws_ecs_service" "main" {
   name            = "${var.app_name}-service"
