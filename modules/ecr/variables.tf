@@ -36,4 +36,3 @@ variable "ecr_repository_url" {
   type = string
   default = "367668710117.dkr.ecr.eu-central-1.amazonaws.com/ecr"
 }
-variable "remote_state_bucket" {}
