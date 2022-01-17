@@ -1,8 +1,4 @@
-variable "bucket_name" {
-  type        = string
-  description = "The name of the bucket"
-  default     = ""
-}
+variable "bucket_name" {}
 
 variable "bucket_description" {
   type        = string
