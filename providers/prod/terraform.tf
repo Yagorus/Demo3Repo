@@ -3,10 +3,3 @@ provider "aws" {
     profile = var.aws_profile
 }
 
-terraform {
- 
-  required_providers {
-    aws = {
-      version = "~> 3.35"
-    }
-  }
