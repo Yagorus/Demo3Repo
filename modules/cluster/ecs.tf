@@ -18,6 +18,7 @@ resource "aws_ecs_task_definition" "aws-ecs-task" {
       "portMappings": [
         {
           "containerPort": 80,
+          "command": ["bash", "assign.sh"],
           "protocol": "tcp"
         }
       ],
