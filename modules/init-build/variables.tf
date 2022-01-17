@@ -33,4 +33,3 @@ variable "image_tag"{
 variable "aws_region"{
     type = string
 }
-variable "remote_state_bucket" {}
