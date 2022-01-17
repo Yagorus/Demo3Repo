@@ -47,6 +47,7 @@ resource "aws_ecs_service" "main" {
   desired_count   = 2
   launch_type     = "FARGATE"
 
+
   network_configuration {
     security_groups  = [aws_security_group.load_balancer_security_group.id]
     subnets          = aws_subnet.public.*.id

@@ -19,7 +19,7 @@ variable "app_name" {
 }
 variable "environment" {
   type = string
-  default = "dev"
+  default = "prod"
 }
 
 variable "app_count" {
@@ -36,3 +36,4 @@ variable "ecr_repository_url" {
   type = string
   default = "367668710117.dkr.ecr.eu-central-1.amazonaws.com/ecr"
 }
+

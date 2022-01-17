@@ -39,11 +39,7 @@ variable "app_count" {
 
 variable "image_tag" {
   description = "image tag from git commits"
-  default = "latest"
-}
-
-variable "taskdef_template" {
-  default = "cb_app.json"
+  default = ""
 }
 variable "ecr_repository_url" {
   type = string
