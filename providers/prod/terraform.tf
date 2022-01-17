@@ -5,6 +5,7 @@ provider "aws" {
 }
 
 terraform {
+
    backend "s3" {
      encrypt = true
      bucket  = "flaskapp-dev-eu-west-1"
@@ -16,3 +17,4 @@ terraform {
       version = "~> 3.35"
     }
   }
+}
