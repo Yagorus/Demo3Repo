@@ -1,0 +1,11 @@
+bucket_name = "web-prod-eu-central-1"
+environment = "prod"
+app_name = "httpapp"
+aws_profile = "default"
+aws_account = "367668710117"
+aws_region = "eu-central-1"
+image_tag = "latest"
+repo_url = "https://github.com/Yagorus/Demo3Repo"
+branch_pattern = "^refs/heads/modules$"
+git_trigger_event = "PUSH"
+app_count = 2
